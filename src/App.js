@@ -2,7 +2,10 @@ import React from 'react'
 
 const App = () => {
   return (
-    <h1>Hello App.js</h1>
+    <React.Fragment>
+      <h1>Hello App.js</h1>
+      <p>Hello wolrd</p>
+    </React.Fragment>
   )
 }
 
