@@ -3,6 +3,12 @@ import ReactDom from 'react-dom'
 
 // React Component
 
+
+const Header = () => {
+  return <h1>Hello world!!!React!!!</h1>
+
+}
+
 const List = () => {
   return (
     <ul>
@@ -17,7 +23,7 @@ const List = () => {
 // React Element
 const el =
   <div>
-    <h1>Hello world!!!</h1>
+    <Header/>
     <p>Lorem ipsum bla bla</p>
     <List />
   </div>
