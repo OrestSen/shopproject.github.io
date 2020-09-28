@@ -20,10 +20,8 @@
 .product-features {
     font-weight: bold;
     text-transform: uppercase;
-
-}
-.product-type,.product-screen-size,.product-capacity {
     margin-bottom: 15px;
+
 }
 .btn-add-to-cart {
     text-transform: uppercase;
