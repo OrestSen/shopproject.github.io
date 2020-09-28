@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductList from './Products/ProductList'
 
 const Main = () => {
 	return (
@@ -9,11 +10,12 @@ const Main = () => {
 						Filter
         			</div>
 					<div className="col-lg-9">
-						Product List
-        			</div>
+						<ProductList />
+					</div>
 				</div>
 			</div>
 		</main>
 	)
 }
+
 export default Main
