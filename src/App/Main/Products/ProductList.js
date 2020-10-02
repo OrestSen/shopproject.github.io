@@ -2,33 +2,27 @@ import React from 'react'
 import productsData from './productsData'
 import ProductListItem from './ProductListItem'
 
-
-const user = {
-    name: "Ivan",
-    age:20,
-}
-
-let {
-    name,
-    age
-} = user
-console.log(name)
-
-
 const ProductList = () => {
     return (
         <div className="product-list">
             <h1 className="page-title">Product List</h1>
             <div className="row">
                 {
-                    productsData.map((product) => (
-                        <div className="col-lg-6" key={product.id}>
+                    productsData.map(({
+                        id,
+                        name,
+                        description,
+                        type,
+                        capacity,
+                        price,
+                    }) => (
+                        <div className="col-lg-6" key={id}>
                             <ProductListItem
-                                name={product.name}
-                                description={product.description}
-                                type={product.type}
-                                capacity={product.capacity}
-                                price={product.price}
+                                name={name}
+                                description={description}
+                                type={type}
+                                capacity={capacity}
+                                price={price}
                             />
                         </div>
                     ))
