@@ -10,7 +10,7 @@ const productsData = [
     {
         id:2,
         name:"iPhone X",
-        description:"This is iPhone X",
+        // description:"This is iPhone X",
         type:"phone",
         capacity:256,
         price:1000,

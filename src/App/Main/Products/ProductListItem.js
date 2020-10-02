@@ -30,4 +30,8 @@ ProductListItem.propTypes = {
     capacity:PropTypes.number.isRequired,
     price:PropTypes.number.isRequired
 }
+
+ProductListItem.defaultProps = {
+    description:"No description ..."
+}
 export default ProductListItem
