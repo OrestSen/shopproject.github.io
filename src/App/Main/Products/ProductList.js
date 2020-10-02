@@ -3,6 +3,18 @@ import productsData from './productsData'
 import ProductListItem from './ProductListItem'
 
 
+const user = {
+    name: "Ivan",
+    age:20,
+}
+
+let {
+    name,
+    age
+} = user
+console.log(name)
+
+
 const ProductList = () => {
     return (
         <div className="product-list">
