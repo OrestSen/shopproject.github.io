@@ -4,12 +4,18 @@ import './ProductListItem.css'
 
 class ProductListItem extends Component {
 
-    constructor() {
-        super()
-        this.state = {
-            productCount:2,
-        }
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         productCount:2,
+    //     }
+    // }
+
+    
+    state = {
+        productCount: 1,
     }
+
     render() {
         const {
             name,
