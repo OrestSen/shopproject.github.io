@@ -20,6 +20,11 @@ const ProductListItem = ({
             <div className="product-features">Type: {type}</div>
             <div className="product-features">Capacity: {capacity}</div>
             <div className="product-price">$ {price}</div>
+            <div className="product-quantity">
+                <button>-</button>
+                <input type="text" value={1} readOnly />
+                <button>+</button>
+            </div>
             <button className="btn-add-to-cart">Add to cart</button>
         </div>
     )
