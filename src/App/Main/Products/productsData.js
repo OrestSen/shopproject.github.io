@@ -7,7 +7,7 @@ const productsData = [
         type: "phone",
         capacity: 256,
         price: 500,
-        // image: '/images/iphone.png',
+        image: '/images/iphone.png',
     },
     {
         id: 2,
