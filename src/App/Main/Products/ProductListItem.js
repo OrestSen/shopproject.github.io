@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import './ProductListItem.css'
 
 class ProductListItem extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            productCount:2,
+        }
+    }
     render() {
         const {
             name,
@@ -24,7 +31,7 @@ class ProductListItem extends Component {
                 <div className="product-price">$ {price}</div>
                 <div className="product-quantity">
                     <button>-</button>
-                    <input type="text" value={1} readOnly />
+                    <input type="text" value={this.state.productCount} readOnly />
                     <button>+</button>
                 </div>
                 <button className="btn-add-to-cart">Add to cart</button>
@@ -32,7 +39,6 @@ class ProductListItem extends Component {
         )
     }
 }
-
 
 ProductListItem.propTypes = {
     name: PropTypes.string.isRequired,
