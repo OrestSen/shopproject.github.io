@@ -38,7 +38,7 @@ class ProductListItem extends Component {
                     <button>-</button>
                     <input type="text" value={this.state.productCount} readOnly />
                     <button
-                        onClick={this.onIncrementClick.bind(this)}
+                        onClick={()=>this.onIncrementClick()}
                         >+</button>
                 </div>
                 <button className="btn-add-to-cart">Add to cart</button>
