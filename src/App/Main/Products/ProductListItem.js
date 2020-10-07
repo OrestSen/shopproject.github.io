@@ -26,11 +26,6 @@ class ProductListItem extends Component {
         }))
     }
 
-    disChange = (e) => {
-        this.setState({
-            productCount:e.target.value
-        })
-    }
 
     render() {
         const {
@@ -59,9 +54,9 @@ class ProductListItem extends Component {
                         disabled={this.state.productCount <= 1}
                         onClick={() => this.onDecrementClick()}
                     >-</button>
-                    <input type="text" value={this.state.productCount} onChange={this.disChange} readOnly />
+                    <input type="text" value={this.state.productCount}  readOnly />
                     <button
-                        disabled={this.state.productCount >= 5}
+                        disabled={this.state.productCount >= 10}
                         onClick={() => this.onIncrementClick()}
                     >+</button>
                 </div>
