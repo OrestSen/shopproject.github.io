@@ -21,8 +21,8 @@ const Header = ({
                     </div>
                     <div className="col-lg-3">
                         <Cart 
-                            count={}
-                            price={}
+                            count={cartData.count}
+                            price={cartData.price}
                         />
                     </div>
                 </div>

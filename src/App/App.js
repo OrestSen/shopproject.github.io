@@ -16,7 +16,7 @@ class App extends Component {
 		}
 	}
 
-	addProductToCart(count, price) {
+	addProductToCart = (count, price) =>{
 		this.setState((prevState) => ({
 			cartData: {
 				count: prevState.cartData.count + count,
