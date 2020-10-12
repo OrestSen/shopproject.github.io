@@ -20,14 +20,16 @@ class ProductListItem extends Component {
         }))
     }
 
-    onChangeColor = () => {
-        this.setState((prevState) => ({
-            color: "red"
-        }))
-    }
+    // onChangeColor = () => {
+    //     const newColor = this.state.color == "green" ? "red" : "green";
+    //     this.setState(() => ({
+    //         color: newColor
+    //     }))
+    // }
 
     render() {
         const {
+            id,
             name,
             description = "No description...",
             type,
@@ -61,7 +63,7 @@ class ProductListItem extends Component {
                     >+</button>
                 </div>
                 <button className="btn-add-to-cart"
-                    onClick={() => addProductToCart(this.state.productCount,price)}
+                    onClick={() => addProductToCart(this.state.productCount,price, id+':'+this.state.productCount)}
                 >Add to cart</button>
             </div>
         )

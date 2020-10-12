@@ -11,7 +11,7 @@ const productsData = [
     },
     {
         id: 2,
-        name: "iPhone X",
+        name: "iPhone 11 Pro",
         // description:"This is iPhone X",
         type: "phone",
         capacity: 256,
@@ -29,7 +29,7 @@ const productsData = [
     },
     {
         id: 4,
-        name: "iPhone X",
+        name: "iPhone Pro",
         description: "This is iPhone X",
         type: "phone",
         capacity: 256,
