@@ -1,6 +1,6 @@
 import { func, number, object } from 'prop-types'
 import React from 'react'
-import {keys} from 'lodash'
+import { keys } from 'lodash'
 import './cart.css'
 
 const Cart = ({
@@ -9,10 +9,12 @@ const Cart = ({
     return (
         <div className="cart text-center" >
             {
-                Object.keys(productsInCart).map((productId) => (
-                   <div key={productId}>{productId}:{productsInCart[productId]}</div>
+                keys(productsInCart).map((productId) => (
+                    <div key={productId}>{productId}:{productsInCart[productId]}</div>
+                    
                 ))
             }
+            
         </div>
     )
 }

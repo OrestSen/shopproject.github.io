@@ -12,19 +12,15 @@ class App extends Component {
 	state = {
 		productsInCart: {
 			1: 3,
-			2: 2,
-			3: 5
+			2: 1,
 		}
 	}
 
-	addProductToCart = (count, price) => {
+	addProductToCart = (productId, count) => {
 		this.setState((prevState) => ({
-			cartData: {
-				count: prevState.cartData.count + count,
-				price: prevState.cartData.price + (price * count),
-
-			}
-
+			productsInCart: {
+				[productId]:(prevState.productsInCart[productId] || 0) + count
+			}	
 		}))
 	}
 
@@ -33,7 +29,6 @@ class App extends Component {
 			<>
 				<Header
 					productsInCart={this.state.productsInCart}
-
 				/>
 				<Main
 					addProductToCart={this.addProductToCart}
