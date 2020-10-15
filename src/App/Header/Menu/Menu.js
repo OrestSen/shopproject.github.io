@@ -5,7 +5,7 @@ const Menu = () => {
         <div className="menu">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/">Products</a></li>
+                <li><a href="/">Products</a></li>`1`
                 <li><a href="/">Payment</a></li>
                 <li><a href="/">Shipping</a></li>
             </ul>
