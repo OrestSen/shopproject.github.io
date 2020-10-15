@@ -7,6 +7,9 @@ import Header from './Header/Header'
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
 
+const arr = [1,2,3]
+const num = [...arr,4,5,6]
+console.log(num)
 class App extends Component {
 
 	state = {
@@ -18,10 +21,9 @@ class App extends Component {
 
 	addProductToCart = (productId, count) => {
 		this.setState((prevState) => ({
-			productsInCart:{
-			...prevState.productsInCart,
+			productsInCart: Object.assign({}, prevState.productsInCart, {
 				[productId]: (prevState.productsInCart[productId] || 0) + count
-			}
+			})
 		}))
 	}
 
