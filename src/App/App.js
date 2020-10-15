@@ -11,22 +11,23 @@ class App extends Component {
 
 	state = {
 		productsInCart: {
-			1: 3,
+			1: 1,
 			2: 1,
 		}
 	}
 
 	addProductToCart = (productId, count) => {
 		this.setState((prevState) => ({
-			productsInCart: {
-				[productId]:(prevState.productsInCart[productId] || 0) + count
-			}	
+			productsInCart: Object.assign({}, prevState.productsInCart, {
+				[productId]: (prevState.productsInCart[productId] || 0) + count
+			})
 		}))
 	}
 
 	render() {
 		return (
 			<>
+
 				<Header
 					productsInCart={this.state.productsInCart}
 				/>

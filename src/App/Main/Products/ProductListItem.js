@@ -36,7 +36,7 @@ class ProductListItem extends Component {
             capacity,
             price,
             image = "/images/no-image.png",
-            addProductToCart
+            addProductToCart,
         } = this.props;
         return (
             <div className="product-list-item">
