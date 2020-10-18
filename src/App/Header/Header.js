@@ -5,7 +5,6 @@ import './header.css'
 import Logo from './Logo/Logo'
 import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
-import {Route} from 'react-router-dom'
 
 const Header = ({
     productsInCart
@@ -16,7 +15,6 @@ const Header = ({
                 <div className="row">
                     <div className="col-lg-3">
                         <Logo/>
-                        
                     </div>
                     <div className="col-lg-6">
                         <Menu />

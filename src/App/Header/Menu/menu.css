@@ -3,15 +3,18 @@
 	content: "";
 	display: block;
 }
+
 .menu > ul > li {
 	float: left;
 	width: 25%;
 	border-right: 1px solid #3366cc;
 
 }
+
 .menu > ul > li:first-child {
 	border-left: 1px solid #3366cc;
 }
+
 .menu > ul li > a {
 	display: block;
 	height: 50px;
@@ -21,6 +24,7 @@
 	font-size: 21px;
 	color:#3366cc;
 }
+
 .menu > ul li > a:hover {
 	background-color: #3366cc;
 	color:white;
