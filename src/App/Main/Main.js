@@ -4,9 +4,11 @@ import { Route } from 'react-router-dom'
 import CartPage from './CartPage.js/CartPage'
 import Payment from './PaymentPage.js/PaymentPage'
 import ShippingPage from './ShippingPage.js/ShipingPage'
+import Cart from '../Header/Cart/Cart'
 
 const Main = ({
-	addProductToCart
+	addProductToCart,
+	productsInCart
 }) => {
 	return (
 		<main className="main">
@@ -21,7 +23,12 @@ const Main = ({
 								addProductToCart={addProductToCart}
 							/>
 						)} />
-						<Route path="/cart" component={CartPage} />
+						<Route path="/cart" render={() => (
+							<CartPage
+								productsInCart={productsInCart}
+							/>
+
+						)} />
 						<Route path="/payment" component={Payment} />
 						<Route path="/shipping" component={ShippingPage} />
 					</div>
