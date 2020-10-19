@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	
+	margin:0 auto;
+}
+.row:after {
+	display: block;
+	clear: both;
+	content:"";
+}
+[class*="col-"] {
+	float: left;
+}
+.col-lg-3 {
+	width: 25%;
+}
+.col-lg-6 {
+	width: 50%;
+}
+.col-lg-9 {
+	width: 75%;
+}
+.text-center {
+	text-align: center;
+}
+
+.products-price,.products-count {
+	color:black;
+	font-size: 17px;
+	margin:5px 0;
+}
+.page-title {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.chekout-heading {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: white;
+}
+.checkout-form__content {
+    padding-right: 48px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.checkout-block {
+    margin-bottom: 24px;
+}
+.checkout-block__title {
+    color: white;
+}
+
+.checkout-block__title {
+    padding-left: 0;
+}
+
+.checkout-block__title {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+.checkout-block__title-informer {
+    position: absolute;
+    left: -40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: #e9e9e9;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+}
+.checkout-block__title {
+    padding-left: 0;
+}
+
+.chips {
+    margin-bottom: 24px;
+    padding-right: 16px;
+    overflow: auto;
+}
+
+.chips__list {
+    display: flex;
+    flex-direction: row;
+}
+
+ol, ul {
+    list-style: none;
+}
+@media (min-width: 1024px) {
+    .chips {
+    padding-right: 0;
+    overflow: visible;
+    }
+}
+@media (min-width: 1024px){
+    .chips__list {
+    flex-wrap: wrap;
+    }
+}
+.chips__button {
+    display: inline-block;
+    margin: 0;
+    padding: 0 16px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background-color:  #3e77aa;
+    font-size: 14px;
+    line-height: 32px;
+    white-space: nowrap;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}

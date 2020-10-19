@@ -1,13 +1,13 @@
 import React from 'react'
 
-const CartPage = () => {
+const ShippingPage = () => {
     return (
         <>
             <div className="product-list">
-                <h1 className="page-title">Cart Page</h1>
+                <h1 className="page-title">Shipping Page</h1>
             </div>
         </>
     )
 }
 
-export default CartPage
+export default ShippingPage
