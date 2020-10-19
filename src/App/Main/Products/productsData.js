@@ -37,4 +37,13 @@ const productsData = [
         image: '/images/ipad.png',
     },
 ]
+
+export const getProductsMap = (array) => {
+    return array.reduce((obj, product) => ({
+        ...obj,
+        [product.id]: product,
+    }), {})
+}
+
+
 export default productsData
