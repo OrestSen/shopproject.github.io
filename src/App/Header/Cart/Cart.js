@@ -11,6 +11,7 @@ const productsMap = productsData.reduce((obj, product) => ({
     [product.id]: product,
 }), {})
 
+
 const Cart = ({
     productsInCart,
 
@@ -22,6 +23,13 @@ const Cart = ({
                     <div key={productId}>{productsMap[productId].name}:{productsInCart[productId]}</div>
                 ))
             }
+            <div>
+                Total : {
+                    keys(productsInCart).reduce((total, productId) => {
+                        return(total + (productsMap[productId].price * productsInCart[productId]))  
+                    },0)
+                }$
+            </div>
             <Link to="/cart">Show cart</Link>
         </div>
     )

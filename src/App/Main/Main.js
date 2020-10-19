@@ -5,7 +5,6 @@ import CartPage from './CartPage.js/CartPage'
 import Payment from './PaymentPage.js/PaymentPage'
 import ShippingPage from './ShippingPage.js/ShipingPage'
 
-
 const Main = ({
 	addProductToCart
 }) => {
