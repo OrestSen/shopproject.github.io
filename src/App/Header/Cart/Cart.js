@@ -6,7 +6,6 @@ import CartProductList from '../../../Components/Cart/CartProductList'
 
 const Cart = ({
     productsInCart
-
 }) => {
     return (
         <div className="cart text-center">

@@ -27,9 +27,9 @@ const Main = ({
 							<CartPage
 								productsInCart={productsInCart}
 							/>
-							
+
+
 						)} />
-						<CartProductList/>		
 						<Route path="/payment" component={Payment} />
 						<Route path="/shipping" component={ShippingPage} />
 					</div>
