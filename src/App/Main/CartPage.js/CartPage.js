@@ -5,12 +5,14 @@ import CartProductListItemExtended from '../../../Components/Cart/CartProductLis
 
 const CartPage = ({
     productsInCart,
+    removeProductFromCart
 
 }) => {
     return (
         <>
             <h1 className="page-title">Cart Page</h1>
             <CartProductList
+                removeProductFromCart={removeProductFromCart}
                 productsInCart={productsInCart}
                 CartItem={CartProductListItemExtended}
             />

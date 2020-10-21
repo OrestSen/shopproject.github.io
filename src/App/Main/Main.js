@@ -8,7 +8,8 @@ import CartProductList from '../../Components/Cart/CartProductList'
 
 const Main = ({
 	addProductToCart,
-	productsInCart
+	productsInCart,
+	removeProductFromCart
 }) => {
 	return (
 		<main className="main">
@@ -25,10 +26,9 @@ const Main = ({
 						)} />
 						<Route path="/cart" render={() => (
 							<CartPage
+								removeProductFromCart={removeProductFromCart}
 								productsInCart={productsInCart}
 							/>
-
-
 						)} />
 						<Route path="/payment" component={Payment} />
 						<Route path="/shipping" component={ShippingPage} />
