@@ -25,9 +25,7 @@ const Payment = () => {
                                         <li className="chips__item">
                                             <button class="chips__button" type="button"> Я постійний клієнт</button>
                                         </li>
-
                                     </ul>
-
                                 </div>
                             </div>
 
