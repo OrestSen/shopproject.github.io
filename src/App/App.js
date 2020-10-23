@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-
+import {omit} from 'lodash'
 import '../common/style/reset.css'
 import '../common/style/base.css'
 
 import Header from './Header/Header'
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
+
+
 
 class App extends Component {
 
@@ -26,14 +28,15 @@ class App extends Component {
 	}
 
 	removeProductFromCart = (productId) => {
-		this.setState((prevState) => {
+		this.setState((prevState) => ({
+			productsInCart:omit(prevState.productsInCart,[productId])
 			// let prevProductInCart = Object.assign({}, prevState.productsInCart)
-			let prevProductInCart = { ...prevState.productsInCart }
-			delete prevProductInCart[productId]
-			return {
-				productsInCart: prevProductInCart
-			}
-		})
+			// let prevProductInCart = { ...prevState.productsInCart }
+			// delete prevProductInCart[productId]
+			// return {
+			// 	productsInCart: prevProductInCart
+			// }
+		}))
 	}
 
 	render() {

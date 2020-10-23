@@ -4,7 +4,6 @@ import { Route } from 'react-router-dom'
 import CartPage from './CartPage.js/CartPage'
 import Payment from './PaymentPage.js/PaymentPage'
 import ShippingPage from './ShippingPage.js/ShipingPage'
-import CartProductList from '../../Components/Cart/CartProductList'
 
 const Main = ({
 	addProductToCart,
