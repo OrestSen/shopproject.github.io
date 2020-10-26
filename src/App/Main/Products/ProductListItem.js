@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
+import Quantity from '../../../Components/Quantity/Quantity'
 
 class ProductListItem extends Component {
 
@@ -51,19 +52,13 @@ class ProductListItem extends Component {
                 <button onClick={() => this.onChangeColor()}>
                     Change color</button>
                 <div className="product-price">$ {price}</div>
-                <div className="product-quantity">
-                    <button
-                        disabled={this.state.productCount <= 1}
-                        onClick={() => this.onDecrementClick()}
-                    >-</button>
-                    <input type="text" value={this.state.productCount} readOnly />
-                    <button
-                        disabled={this.state.productCount >= 10}
-                        onClick={() => this.onIncrementClick()}
-                    >+</button>
-                </div>
+                <Quantity
+                    productCount={this.state.productCount}
+                    onIncrementClick={this.onIncrementClick}
+                    onDecrementClick={this.onDecrementClick}
+                />
                 <button className="btn-add-to-cart"
-                    onClick={() => addProductToCart(id,this.state.productCount)}
+                    onClick={() => addProductToCart(id, this.state.productCount)}
                 >Add to cart</button>
             </div>
         )

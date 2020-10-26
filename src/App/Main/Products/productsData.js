@@ -45,5 +45,4 @@ export const getProductsMap = (array) => {
     }), {})
 }
 
-
 export default productsData

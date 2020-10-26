@@ -39,6 +39,16 @@ class App extends Component {
 		}))
 	}
 
+	changeProductCount = (productId,quantity) => {
+		this.setState((prevState) => ({
+			productsInCart:{
+				...prevState.productsInCart,
+				[productId]:quantity
+			}
+		}))
+	}
+
+
 	render() {
 		return (
 			<>
@@ -50,6 +60,7 @@ class App extends Component {
 					productsInCart={this.state.productsInCart}
 					addProductToCart={this.addProductToCart}
 					removeProductFromCart={this.removeProductFromCart}
+					changeProductCount={this.changeProductCount}
 				/>
 				<Footer />
 			</>
