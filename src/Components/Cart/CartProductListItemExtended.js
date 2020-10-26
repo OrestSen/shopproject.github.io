@@ -28,9 +28,9 @@ const CartProductListItemExtended = ({
                     </p>
                     <Quantity
                         productCount={productCount}
-                        onDecrementClick={() => changeProductCount(product.id,productCount-1)}
+                        onDecrementClick={() => (productCount ===1) ? removeProductFromCart(product.id) : changeProductCount(product.id,productCount-1)}
                         onIncrementClick={() => changeProductCount(product.id,productCount+1)}
-                        
+                        minCount={0}
 
                     />
                     <p className="cart-extended-sum">

@@ -56,6 +56,7 @@ class ProductListItem extends Component {
                     productCount={this.state.productCount}
                     onIncrementClick={this.onIncrementClick}
                     onDecrementClick={this.onDecrementClick}
+                    minCount={1}
                 />
                 <button className="btn-add-to-cart"
                     onClick={() => addProductToCart(id, this.state.productCount)}
