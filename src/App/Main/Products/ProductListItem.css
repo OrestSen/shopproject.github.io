@@ -71,3 +71,8 @@
 button:disabled {
     background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
 }
+.inputClass {
+    width: 0px;
+    background-color: none;
+    border: none;
+}

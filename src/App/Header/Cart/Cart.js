@@ -5,15 +5,18 @@ import CartTotal from '../../../Components/Cart/CartTotal'
 import CartProductList from '../../../Components/Cart/CartProductList'
 
 const Cart = ({
-    productsInCart
+    productsInCart,
+    products
 }) => {
     return (
         <div className="cart text-center">
             <CartProductList
+                products={products}
                 productsInCart={productsInCart}
             />
             <CartTotal
                 productsInCart={productsInCart}
+                products={products}
             />
             <Link to="/cart">Show cart</Link>
         </div>

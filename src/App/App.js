@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {omit} from 'lodash'
+import { omit } from 'lodash'
+import axios from 'axios'
 import '../common/style/reset.css'
 import '../common/style/base.css'
 
@@ -12,10 +13,16 @@ import Footer from './Footer/Footer'
 class App extends Component {
 
 	state = {
-		productsInCart: {
-			1: 1,
-			2: 1,
-		}
+		productsInCart: {},
+		products: []
+	}
+
+	componentDidMount() {
+		axios.get('http://my-json-server.typicode.com/kznkv-skillup/server/posts')
+			.then(res => res.data)
+			.then(products => this.setState({
+				products
+			}))
 	}
 
 	addProductToCart = (productId, count) => {
@@ -29,7 +36,7 @@ class App extends Component {
 
 	removeProductFromCart = (productId) => {
 		this.setState((prevState) => ({
-			productsInCart:omit(prevState.productsInCart,[productId])
+			productsInCart: omit(prevState.productsInCart, [productId])
 			// let prevProductInCart = Object.assign({}, prevState.productsInCart)
 			// let prevProductInCart = { ...prevState.productsInCart }
 			// delete prevProductInCart[productId]
@@ -39,20 +46,22 @@ class App extends Component {
 		}))
 	}
 
-	changeProductCount = (productId,quantity) => {
+	changeProductCount = (productId, quantity) => {
 		this.setState((prevState) => ({
-			productsInCart:{
+			productsInCart: {
 				...prevState.productsInCart,
-				[productId]:quantity
+				[productId]: quantity
 			}
 		}))
 	}
 
 
 	render() {
+		console.log(this.state.products)
 		return (
 			<>
 				<Header
+					products={this.state.products}
 					productsInCart={this.state.productsInCart}
 				/>
 				<button onClick={() => { this.removeProductFromCart(1) }}>Delete</button>
@@ -61,6 +70,7 @@ class App extends Component {
 					addProductToCart={this.addProductToCart}
 					removeProductFromCart={this.removeProductFromCart}
 					changeProductCount={this.changeProductCount}
+					products={this.state.products}
 				/>
 				<Footer />
 			</>

@@ -7,20 +7,22 @@ import Menu from './Menu/Menu'
 import Cart from './Cart/Cart'
 
 const Header = ({
-    productsInCart
+    productsInCart,
+    products
 }) => {
     return (
         <header className="header">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3">
-                        <Logo/>
+                        <Logo />
                     </div>
                     <div className="col-lg-6">
                         <Menu />
                     </div>
                     <div className="col-lg-3">
                         <Cart
+                            products={products}
                             productsInCart={productsInCart}
                         />
                     </div>
