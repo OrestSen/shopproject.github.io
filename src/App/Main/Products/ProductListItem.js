@@ -48,9 +48,9 @@ class ProductListItem extends Component {
                 <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}</div>
-                <div>Color:{this.state.color}</div>
-                <button onClick={() => this.onChangeColor()}>
-                    Change color</button>
+                {/* <div>Color:{this.state.color}</div> */}
+                {/* <button onClick={() => this.onChangeColor()}>
+                    Change color</button> */}
                 <div className="product-price">$ {price}</div>
                 <Quantity
                     productCount={this.state.productCount}
